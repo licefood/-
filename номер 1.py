@@ -11,8 +11,12 @@ def f(x, A):
 A = 0
 x = np.linspace(-10, 10, 400)
 y = f(x, A)
-data = [{"x": x, "y": y} for x, y in zip(x, y)]
-
+z = list(x)
+v = list(y)
+Data = {
+    "x": z,
+    "y": v
+}
 if not os.path.exists('results'):
     os.makedirs('results')
 
